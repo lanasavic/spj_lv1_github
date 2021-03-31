@@ -34,9 +34,18 @@ function Spremi(){
         "<span class='glyphicon glyphicon-remove' />" +
         "</button>" +
         "</td>" +
+        "<td>" +
+        "<input type='checkbox' onclick='checkRow(this);' class='btn btn-default'>" +
+        "<span class='glyphicon glyphicon-ok' />" +
+        "</button>" +
+        "</td>" +
         "</tr>");
 }
 
 function deleteRow(ctl) {
     $(ctl).parents("tr").remove();
+}
+
+function checkRow(ctl) {
+    $(ctl).parents("tr").css('background-color','#dc7777');
 }
